@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head> 
+<meta charset="utf-8">
+<title>首頁</title>
+<style>
+    body {
+        font-family: "思源黑體";
+        font-size: 1.1em;
+        background-color: beige;
+    }
+    #left{
+        padding: 10px 30px 30px 30px;
+        position: relative;
+	    float:left;
+	    height: 300px;
+	    width: 500px;
+	    background-color: rgb(226, 226, 255);
+        margin-top: 15px;
+        margin-left: 8%;
+        border:7px rgb(8, 0, 255) dotted;
+        border-radius: 50px;
+    }
+    #main{
+        padding: 10px 100px 30px 100px;
+        position: relative;
+	    float: left;
+	    height: 100%;
+	    width: auto;
+	    background-color: rgb(255, 223, 162);
+        margin-top: 15px;
+        margin-left: 2%;
+        border:7px rgb(251, 63, 0) dotted;
+        border-radius: 50px;
+    }
+    #box{
+        padding: 10px 30px 30px 30px;
+        position: relative;
+	    float:left;
+	    height: 300px;
+	    width: 500px;
+	    background-color: rgb(226, 226, 255);
+        top: 120px;
+        left: -38px;
+        border:7px rgb(8, 0, 255) dotted;
+        border-radius: 50px;
+    }
+    .btnsm {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 0.8em;
+        margin-top: 10px;
+    }
+</style>
+<script>
+    function btnLogin(){
+        var acc = document.getElementById("acc");
+        var passwd = document.getElementById("passwd");
+        alert("以下是你輸入的內容\n帳號: " + acc.value + "\n密碼: " + passwd.value);
+    }
+</script>
+</head>
+
+<body>
+    <div id="left">
+        <h1>模擬登入</h1>
+        <p>在輸入完帳號和密碼後，會彈出對話視窗顯示剛才輸入的資料。</p>
+        <form name="login" style="font-size: 1.2em;">
+            帳號：<input id="acc" type="text" size="8" style="font-size: 1em;margin-bottom: 10px;"><br>
+            密碼：<input id="passwd" type="password" size="8" style="font-size: 1em;"><br>
+            <button class="btnsm" type="button" value="Submit" onclick="btnLogin()" \>登入</button>
+        </form>
+
+        <div id="box">
+            <h1>本網站已架設於 GitHub Pages</h1>
+            <p>網址：</p>
+
+        </div>
+    </div>
+    <div id="main">
+    <h1>[網頁設計] 期末成品</h1>
+    <h2>組員名單：</h2>
+    <table border="1">
+        <tr>
+            <th style="padding:0 20px 0 20px; text-align: center;">
+                系級
+            <td style="padding:0 20px 0 20px; text-align: center;">
+                電機2A
+            <td rowspan="3">
+                <img height="250px" style="padding:5px 5px 5px 5px; text-align: center;" src="./zj-personal-site/images/selfie.jpg"/>
+        <tr>
+            <th style="padding:0 20px 0 20px; text-align: center;">
+                學號
+            <td style="padding:0 20px 0 20px; text-align: center;">
+                A8221564
+        <tr>
+            <th style="padding:0 20px 0 20px; text-align: center;">
+                姓名
+            <td style="padding:0 20px 0 20px; text-align: center;">
+                莊淳傑
+        <tr>
+            <th style="padding:10px 20px 10px 20px; text-align: center;">負責項目</th>
+            <td colspan="2" style="padding:10px 20px 10px 20px; text-align: center;">FSM狀態圖模擬、DS HW2筆記、<br>頁面架構設計、網站架設</td>
+        </tr>
+    </table>
+    <table border="1" style="margin-top: 20px;">
+        <tr>
+            <th style="padding:0 20px 0 20px; text-align: center;">
+                系級
+            <td style="padding:0 20px 0 20px; text-align: center;">
+                電機2B
+            <td rowspan="3">
+                <img height="250px" style="padding:5px 5px 5px 5px; text-align: center;" src="./images/A922.jpg"/>
+        <tr>
+            <th style="padding:0 20px 0 20px; text-align: center;">
+                學號
+            <td style="padding:0 20px 0 20px; text-align: center;">
+                A9249918
+        <tr>
+            <th style="padding:0 20px 0 20px; text-align: center;">
+                姓名
+            <td style="padding:0 20px 0 20px; text-align: center;">
+                陳泑瑋
+        <tr>
+            <th style="padding:10px 20px 10px 20px; text-align: center;">負責項目</th>
+            <td colspan="2" style="padding:10px 20px 10px 20px; text-align: center;">網頁美化、功能測試、工程數學、<br>複變函數、線性代數、電磁學講義</td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>
