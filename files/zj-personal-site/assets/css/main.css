@@ -3113,5 +3113,5 @@
 }
 @font-face {
     font-family: "思源黑體";
-    src: "./SourceHanSansTW-Regular.ttf";
+    src:url(/files/font/SourceHanSansTW-Regular.ttf);
 }
