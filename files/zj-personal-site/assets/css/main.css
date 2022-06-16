@@ -24,6 +24,7 @@
 
 	body {
 		line-height: 1;
+		font-family: snFont;
 	}
 
 	ol, ul {
@@ -3112,6 +3113,6 @@
     padding: 2.5em 0 0 0;
 }
 @font-face {
-    font-family: "思源黑體";
-    src:url(/files/font/SourceHanSansTW-Regular.ttf);
+    font-family: snFont;
+    src:url(./font/SourceHanSansTW-Regular.ttf);
 }

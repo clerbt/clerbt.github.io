@@ -1,6 +1,6 @@
 body {
     background: rgb(255, 240, 249);
-    font-family: "思源黑體";
+    font-family: snFont;
     margin-left: 15px;
 }
 h3 {
@@ -26,8 +26,8 @@ li {
     font-size: 1.5em;
 }
 @font-face {
-    font-family: "思源黑體";
-    src:url(/files/font/SourceHanSansTW-Regular.ttf);
+    font-family: snFont;
+    src:url(./font/SourceHanSansTW-Regular.ttf);
 }
 html::-webkit-scrollbar {
     width: 0.5em;
