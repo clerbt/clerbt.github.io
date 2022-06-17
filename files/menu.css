@@ -4,14 +4,14 @@ body {
     margin-left: 15px;
 }
 h3 {
-    color: #C00;
+    color: rgb(225, 0, 30);
 }
 a {
     color: blue;
 }
 #list {
     font-size: small;
-    color: #C00;
+    color: rgb(225, 0, 30);
 }
 ul {
     list-style-type: none;
