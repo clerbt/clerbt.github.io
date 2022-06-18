@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <link href="./style.css" rel="stylesheet">
+    <title>Mealy machine state diagram</title>
+    <script>
+        var arr = [];
+        function myFunction() {
+            for (var i = 1; i <= 4; i++)
+                for (var k = 1; k <= 4; k++)
+                    document.getElementById("tx" + i + "-" + k).style.display = 'none';
+
+            for (var i = 1; i <= 4; i++)
+                for (var k = 1; k <= 4; k++)
+                    document.getElementById(i + "-" + k).style.display = 'none';
+        }
+        function getOutput() {
+            var index = 0, e;
+            for (var i = 1; i <= 4; i++) {
+                for (var k = 0; k < 2; k++) {
+                    e = document.getElementById("nx" + i + "_" + k);
+                    arr[index++] = e.value;
+                    e = document.getElementById("output" + i + "_" + k);
+                    arr[index++] = e.value;
+                }
+            }
+            myFunction();
+            changeText();
+            drawDiagram();
+        }
+        function drawDiagram() {
+            for (var i = 1, k; i <= 15; i += 2) {
+                k = Math.floor(i / 4) + 1;
+                document.getElementById(k + "-" + arr[i - 1]).style.display = 'block';
+                document.getElementById("tx" + k + "-" + arr[i - 1]).style.display = 'block';
+            }
+        }
+        function changeText() {
+            for (var i = 1, m = 0, k; i <= 15; i += 2) {
+                k = Math.floor(i / 4) + 1;
+                document.getElementById("tx" + k + "-" + arr[i - 1]).src = "./images/text" + m + arr[i] + "/tx" + k + "-" + arr[i - 1] + ".png";
+
+                if (m == 0) m = 1; else m = 0;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div style="margin: 100px 0 0 5%">
+        <h1 style = "font-size: 2.5em;">Mealy Machine State Diagram</h1>
+        <div style="text-align: center;position: absolute;margin-left: 40%;">
+            <div>
+                <img id="map" src="images/map.png">
+            </div>
+            <img id="1-1" style="top: -80px; left: -100px;" src="./images/1-1.png">
+            <img id="2-2" style="top: -80px; left: -100px;" src="./images/2-2.png">
+            <img id="3-3" style="top: -75px; left: -100px;" src="./images/3-3.png">
+            <img id="4-4" style="top: -75px; left: -100px;" src="./images/4-4.png">
+            <img id="1-2" src="./images/1-2.png">
+            <img id="1-3" src="./images/1-3.png">
+            <img id="1-4" src="./images/1-4.png">
+            <img id="2-1" src="./images/2-1.png">
+            <img id="2-3" src="./images/2-3.png">
+            <img id="3-2" src="./images/3-2.png">
+            <img id="3-4" src="./images/3-4.png">
+            <img id="4-1" src="./images/4-1.png">
+            <img id="4-3" src="./images/4-3.png">
+            <img id="3-1" src="./images/3-1.png">
+            <img id="2-4" src="./images/2-4.png">
+            <img id="4-2" src="./images/4-2.png">
+
+            <img id="tx1-3" src="./images/text11/tx1-3.png">
+            <img id="tx3-1" src="./images/text11/tx1-3.png">
+
+            <img id="tx2-4" src="./images/text11/tx2-4.png">
+            <img id="tx4-2" src="./images/text11/tx2-4.png">
+
+            <img id="tx4-1" src="./images/text11/tx4-1.png">
+            <img id="tx1-4" src="./images/text11/tx4-1.png">
+
+            <img id="tx3-2" src="./images/text11/tx3-2.png">
+            <img id="tx2-3" src="./images/text11/tx3-2.png">
+
+            <img id="tx1-2" src="./images/text11/tx1-2.png">
+            <img id="tx2-1" src="./images/text11/tx1-2.png">
+            <img id="tx4-3" src="./images/text11/tx1-2.png">
+            <img id="tx3-4" src="./images/text11/tx1-2.png">
+
+            <img id="tx1-1" src="./images/text11/tx1-1.png">
+            <img id="tx2-2" src="./images/text11/tx2-2.png">
+            <img id="tx3-3" src="./images/text11/tx3-3.png">
+            <img id="tx4-4" src="./images/text11/tx4-4.png">
+
+        </div>
+        <div>
+            <form name="form"></form>
+            <table border="1px" class="trutab">
+                <tr>
+                    <th rowspan="2">status 1</th>
+                    <td rowspan=>
+                        input = 0
+                    <td>output:
+                        <select id="output1_0">
+                            <option>0</option>
+                            <option>1</option>
+                        </select>
+                    <td>next-status:
+                        <select id="nx1_0">
+                            <option>1</option>
+                            <option selected="selected">2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                <tr>
+                    <td rowspan>
+                        input = 1
+                    <td>output:
+                        <select id="output1_1">
+                            <option selected="selected">0</option>
+                            <option>1</option>
+                        </select>
+                    <td>next-status:
+                        <select id="nx1_1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                <tr>
+                    <th rowspan="2">status 2</th>
+                    <td rowspan=>
+                        input = 0
+                    <td>output:
+                        <select id="output2_0">
+                            <option>0</option>
+                            <option selected="selected">1</option>
+                        </select>
+                    <td>next-status:
+                        <select id="nx2_0">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option selected="selected">4</option>
+                        </select>
+                <tr>
+                    <td rowspan>
+                        input = 1
+                    <td>output:
+                        <select id="output2_1">
+                            <option>0</option>
+                            <option>1</option>
+                        </select>
+                    <td>next-status:
+                        <select id="nx2_1">
+                            <option selected="selected">1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                <tr>
+                    <th rowspan="2">status 3</th>
+                    <td rowspan=>
+                        input = 0
+                    <td>output:
+                        <select id="output3_0">
+                            <option>0</option>
+                            <option selected="selected">1</option>
+                        </select>
+                    <td>next-status:
+                        <select id="nx3_0">
+                            <option>1</option>
+                            <option selected="selected">2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                <tr>
+                    <td rowspan>
+                        input = 1
+                    <td>output:
+                        <select id="output3_1">
+                            <option>0</option>
+                            <option>1</option>
+                        </select>
+                    <td>next-status:
+                        <select id="nx3_1">
+                            <option selected="selected">1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                <tr>
+                    <th rowspan="2">status 4</th>
+                    <td rowspan=>
+                        input = 0
+                    <td>output:
+                        <select id="output4_0">
+                            <option>0</option>
+                            <option>1</option>
+                        </select>
+                    <td>next-status:
+                        <select id="nx4_0">
+                            <option>1</option>
+                            <option>2</option>
+                            <option selected="selected">3</option>
+                            <option>4</option>
+                        </select>
+                <tr>
+                    <td rowspan>
+                        input = 1
+                    <td>output:
+                        <select id="output4_1">
+                            <option>0</option>
+                            <option selected="selected">1</option>
+                        </select>
+                    <td>next-status:
+                        <select id="nx4_1">
+                            <option>1</option>
+                            <option selected="selected">2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+            </table>
+            </form>
+            <button class="btnsm" onclick="getOutput()">送出</button>
+            <button class="btnclr" onclick="myFunction()">清空</button>
+        </div>
+
+    </div>
+</body>
+
+</html>
