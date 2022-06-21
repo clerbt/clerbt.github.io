@@ -28,7 +28,7 @@ a:hover {
 
 .image:before {
     transition: opacity .2s ease-in-out;
-    background: url(images/overlay.png);
+    background: url(./images/overlay.png);
     border-radius: .35em;
     content: '';
     display: block;
@@ -194,7 +194,7 @@ table.alt tbody tr:first-child td {
 #header {
     background-color: #1f1815;
     background-attachment: scroll, fixed;
-    background-image: url(images/overlay.png), url(images/selfie.jpg);
+    background-image: url(./images/overlay.png), url(./images/selfie.jpg);
     background-position: top left, top left;
     background-repeat: repeat, no-repeat;
     background-size: auto, auto 100%;
